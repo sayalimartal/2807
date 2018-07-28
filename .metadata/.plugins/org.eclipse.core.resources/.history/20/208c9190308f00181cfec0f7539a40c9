@@ -1,0 +1,20 @@
+class Student {
+	int rollNo=27;
+	static String schoolName="SFIT";
+	
+	int getNextRollNo() {
+		rollNo++;
+		return rollNo;
+	}
+	static String getSchoolName() {
+		return schoolName;
+	}
+}
+class StaticNonstatic {
+	public static void main(String[] args) {
+		Student student=new Student();
+		
+		System.out.println(student.getNextRollNo());
+		System.out.println(Student.getSchoolName());
+	}
+}

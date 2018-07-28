@@ -1,0 +1,31 @@
+//Use various access modifiers 
+class Check {
+	private int a=3; //declare variables with various access modifiers
+	public int b=10;
+	protected int c=5;
+	int d=15;
+	
+	public int getA() {  //to access private instance members 
+		return a;
+	}
+
+	void disp() { //display private instance member
+		System.out.println(getA());
+	}
+	
+}
+public class CheckDemo {
+
+	public static void main(String[] args) {
+		
+		Check check=new Check(); //Create object of class Check
+		
+		
+		check.disp();
+		System.out.println(check.b);
+		System.out.println(check.c);
+		System.out.println(check.d);
+
+	}
+
+}

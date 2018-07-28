@@ -1,0 +1,11 @@
+class A {
+	A(){
+		System.out.println("In parent class");
+	}
+}
+class B extends A {
+	
+}
+public class SingleLevelInherit {
+
+}

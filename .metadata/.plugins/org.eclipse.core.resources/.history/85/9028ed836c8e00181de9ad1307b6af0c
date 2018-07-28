@@ -1,0 +1,28 @@
+class Top1{
+	void disp1() {
+		System.out.println("Inside top class");
+	}
+}
+
+class Bottom1{
+	void disp1() {
+		System.out.println("Inside bottom 1 class");
+	}
+}
+
+class Bottom2{
+	void disp1() {
+		System.out.println("Inside bottom 2 class");
+	}
+}
+
+class Bottom3{
+	void disp1() {
+		System.out.println("Inside bottom 3 class");
+	}
+}
+public class TopBottomTest {
+	public static void main(String[] args) {
+		
+	}
+}

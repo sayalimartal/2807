@@ -1,0 +1,22 @@
+//Entry point to test application
+public class EntryPoint {
+	public static void main(String[] args) {
+		
+		BankFactory mmBankFactory=new MMBankFactory();
+		
+		SavingAcc mmSavingAcc=mmBankFactory.getNewSavingAcc(100, "Sayali", 5000, true);
+		CurrentAcc mmCurrentAcc=mmBankFactory.getNewCurrentAcc(101, "Siddhi", 3000, 10000);
+		
+		mmSavingAcc.withdraw(500);
+		System.out.println(mmSavingAcc);
+		mmSavingAcc.withdraw(5000);
+		System.out.println(mmSavingAcc);
+		mmCurrentAcc.withdraw(5000);
+		System.out.println(mmCurrentAcc);
+		mmCurrentAcc.deposit(5000);
+		System.out.println(mmCurrentAcc);
+		mmCurrentAcc.withdraw(20000);
+		System.out.println(mmCurrentAcc);
+		
+	}
+}

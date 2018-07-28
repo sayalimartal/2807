@@ -1,0 +1,5 @@
+//Class CurrentAcc representing a Current Account
+public abstract class CurrentAcc extends BankAcc {
+	private float c
+
+}

@@ -1,0 +1,45 @@
+
+public class Employee {
+
+	private double employeeId;
+	private String employeeName=new String();
+	private static final double monthlyBasic=10000;
+	private static final int medicalAllowance=1250;
+	private static final int conveyanceAllowance=800;
+	private static final double pfPercent=0.1;
+	
+	public double getEmployeeId() {
+		return employeeId;
+	}
+	public void setEmployeeId(double employeeId) {
+		this.employeeId = employeeId;
+	}
+	public String getEmployeeName() {
+		return employeeName;
+	}
+	public void setEmployeeName(String employeeName) {
+		this.employeeName = employeeName;
+	}
+	public static double getMonthlybasic() {
+		return monthlyBasic;
+	}
+	
+	public double getHra() {
+		return (0.5*monthlyBasic);
+	}
+	
+	public double getPfPercent() {
+		return pfPercent;
+	}
+	public void setPfPercent(double pfPercent) {
+		this.pfPercent = pfPercent;
+	}
+	
+	public double getPf() {
+		if((getPfPercent()*monthlyBasic)<6500)
+			return (getPfPercent()*monthlyBasic);
+		else
+			return(6500);
+	}
+	
+}

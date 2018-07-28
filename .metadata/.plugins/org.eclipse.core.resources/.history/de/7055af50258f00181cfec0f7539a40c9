@@ -1,0 +1,42 @@
+//Create Game interface
+interface Game {
+	void play();
+}
+
+class Cricket implements Game {
+	public void play() {
+		System.out.println("Cricket");
+	}
+}
+
+class Football implements Game {
+	public void play() {
+		System.out.println("Football");
+	}
+}
+
+class Tennis implements Game {
+	public void play() {
+		System.out.println("Tennis");
+	}
+}
+
+public class Demo {
+	public static void perform(Game game) {
+		game.play();
+	}
+
+	public static void main(String[] args) {
+		
+		Game cricket=new Cricket();
+		perform(cricket);
+		
+		Game football=new Football();
+		perform(football);
+		
+		Game tennis=new Tennis();
+		perform(tennis);
+
+	}
+
+}

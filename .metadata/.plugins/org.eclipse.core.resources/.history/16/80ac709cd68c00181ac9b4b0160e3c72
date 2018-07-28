@@ -1,0 +1,6 @@
+
+public class Traingle {
+	
+	private int[] side=new int[3];
+
+}

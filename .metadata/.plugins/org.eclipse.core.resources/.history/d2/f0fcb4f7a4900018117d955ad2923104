@@ -1,0 +1,10 @@
+package in.co.capgemini.calculate;
+
+public class Maths {
+
+	public int add(int i, int j) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

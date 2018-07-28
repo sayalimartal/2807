@@ -1,0 +1,7 @@
+package pack3;
+
+public class ad {
+	public static void disp() {
+		System.out.println("a");
+	}
+}

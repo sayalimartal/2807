@@ -1,0 +1,32 @@
+class First {
+	int first=40;
+	First() {
+		System.out.println("Number is "+first);
+	}
+	public void display() {
+		System.out.println("First");
+	}
+}
+
+class Second {
+	int second=50;
+	Second() {
+		System.out.println("Number is "+second);
+	}
+	public void display() {
+		System.out.println("Second");
+	}
+}
+
+public class Two {
+
+	public static void main(String[] args) {
+		
+		First first=new First();
+		first.display();
+		
+		Second second=new Second();
+		second.display();
+	}
+
+}

@@ -1,0 +1,27 @@
+class Check {
+	private int a=0;
+	public int b=8;
+	protected int c=6;
+	int d;
+	
+	public int getA() {
+		return a;
+	}
+
+	void disp() {
+		System.out.println("Variable is "+getA());
+	}
+	
+}
+public class CheckDemo {
+
+	public static void main(String[] args) {
+		Check check=new Check();
+		check.disp();
+		System.out.println(check.b);
+		System.out.println(check.c);
+		System.out.println(check.d);
+
+	}
+
+}

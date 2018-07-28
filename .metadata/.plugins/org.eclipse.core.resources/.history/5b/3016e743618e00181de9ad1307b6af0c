@@ -1,0 +1,18 @@
+class Parent{
+	void display(String name) {
+		System.out.println("Hello "+name+". Welcome to parent class");
+	}
+}
+class Child{
+	void display(int i) {
+		System.out.println("Child class "+i);
+	}
+}
+public class FunctionOverload {
+	public static void main(String[] args) {
+		Parent parent=new Parent();
+		Child child=new Child();
+		parent.display("Sayali");
+		child.display(2);
+	}
+}

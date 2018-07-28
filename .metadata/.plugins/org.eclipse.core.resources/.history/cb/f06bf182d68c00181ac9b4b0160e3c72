@@ -1,0 +1,6 @@
+
+public class TraingleCheck {
+	
+	private int[] side=new int[3];
+
+}

@@ -1,0 +1,48 @@
+
+public class Triangle {
+	private int[] side=new int[3];
+
+	public int[] getSide() {
+		return side;
+	}
+
+	public void setSide(int[] side) {
+		this.side = side;
+	}
+	
+	public boolean isRight(Triangle T)
+	{
+		int sideSquare1=side[0]*side[0];
+		int sideSquare2=side[1]*side[1];
+		int sideSquare3=side[2]*side[2];
+		
+		if((sideSquare1==sideSquare2+sideSquare3) || (sideSquare2==sideSquare1+sideSquare3) || (sideSquare3==sideSquare1+sideSquare2))
+			return true;
+		else
+			return false;
+	}
+	
+	public boolean isScalene(Triangle T)
+	{
+		if(side[0]!=side[1] && side[1]!=side[2]  && side[2]!=side[0])
+			return true;
+		else
+			return false;
+	}
+	
+	public boolean isIsosceles(Triangle T)
+	{
+		if(side[0]==side[1] || side[1]==side[2]  || side[2]==side[0])
+			return true;
+		else
+			return false;
+	}
+	
+	public boolean isEquilateral(Triangle T)
+	{
+		if(side[0]==side[1] && side[1]==side[2]  && side[2]==side[0])
+			return true;
+		else
+			return false;
+	}
+}

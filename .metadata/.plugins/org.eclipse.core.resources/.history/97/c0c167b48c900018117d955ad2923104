@@ -1,0 +1,9 @@
+package pq;
+
+import pack3.ad;
+
+public class tf {
+	public static void main(String[] args) {
+		ad.disp();
+	}
+}

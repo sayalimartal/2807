@@ -1,0 +1,82 @@
+import java.util.*;
+public class VehicleTest 
+{
+
+	public static void main(String args[])
+	{
+		
+		Scanner scanner=new Scanner(System.in);
+		System.out.println("Enter the number of vehicles");
+		
+		int numberOfVehicle=scanner.nextInt();
+		Vehicle vehicle[]= new Vehicle[numberOfVehicle];
+
+		for(int i=0; i<numberOfVehicle; i++)
+		{
+			vehicle[i]= new Vehicle();
+		}
+		Vehicle vehiclecons=new Vehicle(scanner.next());
+		
+		for(int i=0; i<numberOfVehicle; i++)
+		{
+						
+			System.out.println("Enter the name of vehicle "+(i+1)+"'s owner");
+			vehicle[i].setOwnerName(scanner.next());
+			
+			System.out.println("Enter current speed  of vehicle "+(i+1));
+			vehicle[i].setSpeed(scanner.nextInt());
+			
+			System.out.println("Enter current direction of vehicle "+(i+1)+" in degrees");
+			vehicle[i].setDegree(scanner.nextInt());
+			
+			System.out.println("Do you want to turn?");
+			{
+				String answerTurn=scanner.next();
+				if(answerTurn.equals("Yes")) 
+				{
+					System.out.println("Left or Right?");
+					String answerTurnValue=scanner.next();
+					if(answerTurnValue.equals("left")) 
+					{
+						System.out.println("By what value you want to change?");
+						int change=scanner.nextInt();
+						if(change>=180)
+						{
+							System.out.println("Invalid Input");
+							System.exit(0);
+						}
+						else
+						{
+							vehicle[i].changeDirection(change);
+						}
+					}
+					if(answerTurnValue.equals("right")) 
+					{
+						System.out.println("By what value you want to change?");
+						int change=scanner.nextInt();
+						if(change>=180)
+						{
+							System.out.println("Invalid Input");
+							System.exit(0);
+						
+						}
+						else
+						{
+							vehicle[i].changeDirection(0-change);
+						}
+					}
+				}
+			}
+			
+			
+			
+		}
+		
+		for(int i=0; i<numberOfVehicle; i++)
+		{
+			System.out.println(vehicle[i].toString());	
+		}
+		
+		System.out.println("The highest identification number is "+ Vehicle.getIdentificationNumber());
+	}
+}

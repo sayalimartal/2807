@@ -1,0 +1,14 @@
+//Create Game interface
+interface Game {
+	
+	void play();
+}
+
+public class Demo {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

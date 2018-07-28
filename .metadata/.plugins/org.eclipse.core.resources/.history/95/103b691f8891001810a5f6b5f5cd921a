@@ -1,0 +1,26 @@
+package com.factorial;
+
+//import com.factorial.FactorialException.Factorial;
+//import com.factorial.FactorialException.InvalidInputException;
+
+public class TestFactorial {
+
+	public static void main(String[] args) {
+		Factorial factorial= new Factorial();
+		int num=4;
+		System.out.println("Enter a number");
+		try {
+			int fact=factorial.getFactorial(35);
+			if(fact>32767)
+				throw new FactorialException("Factorial cannot be more than 2,147,483,648");
+			System.out.println("Factorial of "+num+" is "+fact);
+		} catch(InvalidInputException iie) {
+			iie.printStackTrace();
+		} catch(FactorialException fe) {
+			fe.printStackTrace();
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	}
