@@ -1,3 +1,4 @@
+//Find the missing number given an array of distinct numbers
 import java.util.Scanner;
 
 public class MissingNumber {
@@ -5,19 +6,22 @@ public class MissingNumber {
 	{
 		int i,j,k=0,len,swap=0,minimum;
 		int[] array=new int[10];
-		Scanner sc=new Scanner(System.in);
+		
+		Scanner scanner=new Scanner(System.in);
 		System.out.println("Enter the length of the array");
-		len=sc.nextInt();
+		len=scanner.nextInt();
 		System.out.println("Enter array elements");
 		for(i=0;i<len;i++)
-			array[i]=sc.nextInt();
+			array[i]=scanner.nextInt();
+		
 		minimum=array[0];
-		for(i=0;i<len;i++)
+		for(i=0;i<len;i++) //Find the minimum value from the array elements
 		{
 			if(minimum>array[i])
 				minimum=array[i];
 		}
-		for(i=0;i<len;i++)
+		
+		for(i=0;i<len;i++)  //Sort the array in ascending order
 		{
 			for(j=i+1;j<len;j++)
 			{
@@ -29,25 +33,26 @@ public class MissingNumber {
 				}
 			}
 		}
-		int[] arrCopy=new int[len+1];
+		
+		int[] arrCopy=new int[len+1]; //New array that includes missing number
 		for(i=0;i<len;i++)
 		{
 			arrCopy[i]=minimum;
 			minimum++;
 		}
+		
 		for(i=0;i<len;i++)
 		{
-			if(array[i]==arrCopy[k])
+			if(array[i]==arrCopy[k]) //Compare elements of two arrays 
 			{
 				k++;
 				continue;
 			}
-			else
+			else                    // If elements are not equal, that value in new array is the missing number
 			{
 				System.out.println("Missing number is "+arrCopy[k]);
 				break;
 			}
 		}
 	}
-
 }
