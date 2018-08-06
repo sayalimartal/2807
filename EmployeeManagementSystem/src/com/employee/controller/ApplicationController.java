@@ -1,5 +1,6 @@
 package com.employee.controller;
 
+import java.util.Map;
 import java.util.TreeSet;
 
 import com.employee.bean.Employee;
@@ -9,7 +10,8 @@ public class ApplicationController implements Controller{
 	EmployeeService service;
 	
 	@Override
-	public void addEmployee(Employee employee) {
+	public void addEmployee(Map<String,Object> map) {
+		Employee employee = new Employee(map.get("employeeName").toString(),Long.parseLong(map.get("employeeSalary").toString()),map.get("employeeDesignation").toString());
 		service.addEmployee(employee);
 	}
 

@@ -12,7 +12,7 @@
 	
 	</bean>
 	
-	<bean id="appcontroller" class="com.employee.controller.ApplicationController">
+	<bean id="Appcontroller" class="com.employee.controller.ApplicationController">
 	<property name="service" ref="Service" />
 	
 	</bean>

@@ -1,47 +1,45 @@
 package com.employee.bean;
 
-public class Employee {
-	private int empId;
+public class Employee implements Comparable<Employee> {
+	
+	private final int empId;
 	private String employeeName;
 	private long salary;
 	private String designation;
+	private static int id=10;
+
+	public Employee(String employeeName, long salary, String designation) {
+		this.empId = id++;
+		this.employeeName = employeeName;
+		this.salary = salary;
+		this.designation = designation;
+	}
 
 	public int getEmpId() {
 		return empId;
-	}
-
-	public void setEmpId(int empId) {
-		this.empId = empId;
 	}
 
 	public String getEmployeeName() {
 		return employeeName;
 	}
 
-	public void setEmployeeName(String employeeName) {
-		this.employeeName = employeeName;
-	}
-
 	public long getSalary() {
 		return salary;
-	}
-
-	public void setSalary(long salary) {
-		this.salary = salary;
 	}
 
 	public String getDesignation() {
 		return designation;
 	}
 
-	public void setDesignation(String designation) {
-		this.designation = designation;
+	@Override
+	public String toString() {
+		return "Employee [empId=" + empId + ", employeeName=" + employeeName + ", salary=" + salary + ", designation="
+				+ designation + "]";
 	}
 
 	@Override
-	public String toString() {
-		return "Employee [employeeName=" + employeeName + ", salary=" + salary + ", designation=" + designation + "]";
+	public int compareTo(Employee employee) {
+		return this.empId-employee.empId;
 	}
-	
-	
+
 }

@@ -1,10 +1,13 @@
 package com.employee.test;
 
+import com.employee.ui.UserInterface;
+
 public class TestEmployee {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		
+		new  UserInterface().start();
+	
 	}
 
 }
