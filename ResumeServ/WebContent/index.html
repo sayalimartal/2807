@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="resume" method="get">
+<table>
+<tr><td>First Name:</td><td><input type="text" name="firstName"><br></td></tr>
+<tr><td>Last Name:</td><td><input type="text" name="lastName"><br></td></tr>
+<tr><td>Gender:</td><td><input type="radio" name="gender" value="male" checked> Male</td>
+<td><input type="radio" name="gender" value="female" checked> Female<br></td></tr>
+<tr><td>Highest Qualification:</td><td><select  name="qualification">
+<option value="post graduate">M.E./M.Tech/M.Sc</option>
+<option value="graduate">B.E./B.Tech/B.Sc</option>
+<option value="high school">HSC/XII</option>
+<option value="school">SSC/X</option>
+</select></td></tr>
+<tr><td>Date of Birth:</td><td><input type="date" name="dob"></td></tr>
+<tr><td>Hobbies:</td><td><select multiple name="hobbies">
+<option value="sing">Singing</option>
+<option value="dance">Dance</option>
+<option value="hockey">Hockey</option>
+<option value="enact">Enact</option>
+<option value="paint">Paint</option>
+<option value="cricket">Cricket</option>
+<option value="football">Football</option>
+<option value="basketball">Basketball</option>
+<option value="craft">Craft</option>
+</select></td></tr>
+<tr><td>Address:</td><td><textarea rows="4" cols="20" name="address"></textarea></td></tr>
+<tr><td>Skills:</td><td><input type="checkbox" name="skill" value="c">C<br>
+<input type="checkbox" name="skill" value="c++">C++<br>
+<input type="checkbox" name="skill" value="java">Java<br>
+<input type="checkbox" name="skill" value=".net">.Net<br></td></tr>
+<tr><td>Email:</td><td><input type="email" name="email"><br></td></tr>
+<tr><td>Website:</td><td><input type="url" name="weburl"></td></tr>
+<tr><td>Contact No:</td><td><input type="tel" name="contact"><br></td></tr>
+<tr><td>Description:</td><td><textarea rows="4" cols="20" name="address"></textarea><br></td></tr>
+<tr><td><input type="reset" value="Reset">
+<input type="reset" value="Submit"></td></tr>
+</table>
+</form>
+</body>
+</html>
