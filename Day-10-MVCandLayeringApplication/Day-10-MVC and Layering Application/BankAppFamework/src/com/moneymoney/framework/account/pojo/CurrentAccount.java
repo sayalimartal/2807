@@ -22,6 +22,8 @@ public abstract class CurrentAccount extends BankAccount {
 	public void setOdLimit(double odLimit) {
 		this.odLimit = odLimit;
 	}
+	
+	 abstract public String withdraw(double amount);
 
 	@Override
 	public String toString() {

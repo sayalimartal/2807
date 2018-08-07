@@ -26,7 +26,6 @@ public abstract class Address {
 	 * This is a Ctor...
 	 */
 	public Address(String houseNo, String street, String city, String state, int pinCode) {
-		super();
 		this.houseNo = houseNo;
 		this.street = street;
 		this.city = city;

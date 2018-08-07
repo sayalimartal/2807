@@ -46,10 +46,21 @@ public abstract class BankAccount {
 		return accountBalance;
 	}
 	
+	public void setAccountBalance(double accountBalance) {
+		this.accountBalance = accountBalance;
+	}
+	
 	//It will give the next account number that will assigned to next account object
 	public static int getNextAccountNumber() {
 		return accountId+1;
 	}
+	
+	public void deposit(double amount) {
+		if(amount>0)
+			this.accountBalance += amount;	
+	}
+	
+	 abstract public String withdraw(double amount);
 	
 	@Override
 	public String toString() {

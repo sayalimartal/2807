@@ -7,7 +7,9 @@ package com.moneymoney.framework.account.pojo;
  *Maintaining savings account details of money money bank
  */
 public abstract class SavingsAccount extends BankAccount {
+	
 	private boolean salary;
+	private final double MINBAL=10000;
 
 	public SavingsAccount(Customer accountHolder, double accountBalance, boolean salary) {
 		super(accountHolder, accountBalance);
@@ -21,9 +23,12 @@ public abstract class SavingsAccount extends BankAccount {
 	public boolean isSalary() {
 		return salary;
 	}
+	
 	public void setSalary(boolean salary) {
 		this.salary = salary;
 	}
+	
+	public abstract String withdraw(double amount);
 
 	@Override
 	public String toString() {
