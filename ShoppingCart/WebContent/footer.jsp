@@ -4,15 +4,9 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Error</title>
+<title>Footer</title>
 </head>
 <body>
-<div>
-<jsp:include page="header.jsp" />
-</div>
-<h3>Error! Username or password is incorrect</h3>
-<div>
-<jsp:include page="footer.jsp" />
-</div>
+<h4> &copy; 2018 &#8208; Capgemini private limited</h4>
 </body>
 </html>

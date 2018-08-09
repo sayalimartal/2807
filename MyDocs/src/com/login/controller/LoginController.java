@@ -30,9 +30,10 @@ public class LoginController extends HttpServlet {
 		
 		String action = request.getServletPath();
 		HttpSession session = request.getSession();
-
+		
 		String username=request.getParameter("userName");
 		String password = request.getParameter("password");
+
 		switch (action) {
 		case "/login.app":
 			

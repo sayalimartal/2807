@@ -9,5 +9,8 @@
 </head>
 <body>
 <h4>Welcome to the MyDocs Portal &#8208; A safe way of sharing documents</h4>
+<jstl:if test='${sessionScope.username != null }'>
+<h4><a href="logout.app">Logout</a></h4>
+</jstl:if>
 </body>
 </html>
