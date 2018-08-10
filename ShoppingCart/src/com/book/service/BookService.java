@@ -8,8 +8,8 @@ public interface BookService {
 
 	Set<Book> viewAllBooks();
 
-	void addBookToCart(int bookId);
-
-	void deleteBookFromCart(Book book);
+//	void addBookToCart(int bookId);
+//
+//	void deleteBookFromCart(Book book);
 
 }

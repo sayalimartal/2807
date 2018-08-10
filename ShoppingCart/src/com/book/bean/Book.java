@@ -7,13 +7,15 @@ public class Book {
 	private String description;
 	private int price;
 	private int bookId;
+	private int bookCount;
 
-	public Book(int bookId, String bookName, String authorName, String description, int price) {
+	public Book(int bookId, String bookName, String authorName, String description, int price, int bookCount) {
 		this.bookName = bookName;
 		this.authorName = authorName;
 		this.description = description;
 		this.price = price;
 		this.bookId = bookId;
+		this.bookCount = bookCount;
 	}
 
 
@@ -45,11 +47,25 @@ public class Book {
 		this.bookId = bookId;
 	}
 
+	
+
+	public int getBookCount() {
+		return bookCount;
+	}
+
+
+	public void setBookCount(int bookCount) {
+		this.bookCount = bookCount;
+	}
+
 
 	@Override
 	public String toString() {
 		return "Book [bookName=" + bookName + ", authorName=" + authorName + ", description=" + description + ", price="
-				+ price + "]";
+				+ price + ", bookId=" + bookId + ", bookCount=" + bookCount + "]";
 	}
+
+
+	
 
 }

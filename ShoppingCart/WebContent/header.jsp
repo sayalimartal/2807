@@ -10,5 +10,7 @@
 <body>
 <h4>Welcome to Book Shopping portal &#8208;</h4>
 
+<h4><a href="viewcart.app">Cart(${sessionScope.cartCount})</a></h4>
+
 </body>
 </html>

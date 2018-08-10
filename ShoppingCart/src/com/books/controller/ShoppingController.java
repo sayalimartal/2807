@@ -14,7 +14,7 @@ import javax.servlet.http.HttpSession;
 
 
 import com.book.bean.Book;
-import com.book.dao.BookDaoImpl;
+import com.book.cart.Cart;
 import com.book.service.BookService;
 import com.book.service.BookServiceImpl;
 
@@ -25,6 +25,7 @@ import com.book.service.BookServiceImpl;
 public class ShoppingController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	BookService service = new BookServiceImpl();
+	Cart cart = new Cart();
 	
        
     /**
@@ -40,25 +41,53 @@ public class ShoppingController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		String action = request.getServletPath();
-		//HttpSession session = request.getSession();
-		
-		
+		System.out.println(action);
+		HttpSession session = request.getSession();
+		session = request.getSession();
+		session.setAttribute("cartCount", cart.getCartCount());
+		session.setAttribute("cartItems", cart.viewCart());
 		
 		switch (action) {
 		case "/add.app":
 			String bookId=request.getParameter("bookId");
-			service.addBookToCart(Integer.parseInt(bookId));
-			System.out.println(BookDaoImpl.booksInCart);
+			cart.addBookToCart(Integer.parseInt(bookId));
 			
-			request.setAttribute("booksInCart", booksInCart);
-			RequestDispatcher dispatcher = request.getRequestDispatcher("cart.jsp");
-			dispatcher.forward(request, response);
+			System.out.println(Cart.cartItems);
+			response.sendRedirect("refresh.app");
+//			request.setAttribute("booksInCart", booksInCart);
+//			RequestDispatcher dispatcher = request.getRequestDispatcher("cart.jsp");
+//			dispatcher.forward(request, response);
 			break;
 		case "/refresh.app":
 			Set<Book> books = service.viewAllBooks();
 			request.setAttribute("books", books);
-			dispatcher = request.getRequestDispatcher("home.jsp");
+			RequestDispatcher dispatcher = request.getRequestDispatcher("home.jsp");
 			dispatcher.forward(request, response);
+			break;
+		case "/viewcart.app":
+//			Collection<Book> cartItems = cart.viewCart();
+//			request.setAttribute("cartItems", cartItems);
+//			int cartCount=cart.getCartCount();
+//			System.out.println(cartItems.size());
+//			cartItems.stream().forEach(System.out::println);
+			
+//			session.setAttribute("cartCount", cartCount);
+//			session.setAttribute("cartItems", cartItems);
+//			dispatcher = request.getRequestDispatcher("cartdetails.jsp");
+//			dispatcher.forward(request, response);
+			//session = request.getSession();
+			System.out.println("HIIII");
+			response.sendRedirect("cartdetails.jsp");
+			System.out.println("********");
+			break;
+		case "/remove.app":
+			bookId=request.getParameter("bookId");
+			cart.deleteBookFromCart(Integer.parseInt(bookId));
+			System.out.println(Cart.cartItems);
+			response.sendRedirect("viewcart.app");
+//			request.setAttribute("booksInCart", booksInCart);
+//			RequestDispatcher dispatcher = request.getRequestDispatcher("cart.jsp");
+//			dispatcher.forward(request, response);
 			break;
 		}
 		

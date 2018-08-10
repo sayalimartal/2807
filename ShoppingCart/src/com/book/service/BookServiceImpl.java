@@ -23,17 +23,17 @@ public class BookServiceImpl implements BookService {
 	/* (non-Javadoc)
 	 * @see com.book.service.BookService#addBook(com.book.bean.Book)
 	 */
-	@Override
-	public void addBookToCart(int bookId) {
-		dao.addBookToCart(bookId);
-	}
-	
-	/* (non-Javadoc)
-	 * @see com.book.service.BookService#deleteBook(com.book.bean.Book)
-	 */
-	@Override
-	public void deleteBookFromCart(Book book) {
-		dao.deleteBookFromCart(book);
-	}
+//	@Override
+//	public void addBookToCart(int bookId) {
+//		dao.addBookToCart(bookId);
+//	}
+//	
+//	/* (non-Javadoc)
+//	 * @see com.book.service.BookService#deleteBook(com.book.bean.Book)
+//	 */
+//	@Override
+//	public void deleteBookFromCart(Book book) {
+//		dao.deleteBookFromCart(book);
+//	}
 
 }
